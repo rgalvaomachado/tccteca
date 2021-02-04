@@ -1,0 +1,180 @@
+/*Interface*/
+*{margin: 0; padding: 0;}
+@font-face {
+     font-family:cocogoose;
+     src: url('Cocogoose_trial.otf');
+}
+body {
+    font-family: arial,sans-serif;
+    width:1300px;
+    background-color: #fff;
+    padding: 20px;
+    margin: auto;
+}
+/*Interface*/
+
+/* Menu*/
+.menu{
+list-style:none;
+background:#000; 
+}
+.menu li{
+position:relative;
+float:left;
+}
+.menu li a{
+    color:#fff;
+    text-decoration:none;
+    padding:5px 10px;
+    display:block;
+    background: #000;
+} 
+.menu li a:hover{
+background:#ddd;
+color:#000;
+}
+.menu li  ul{
+position:absolute;
+background-color:#ddd;
+display:none;
+} 
+.menu li:hover ul{
+    display:block;
+}
+.menu li ul li{
+display:block;
+width:100%;
+}
+/*Menu*/
+
+/*home*/
+#pesquisa{
+    margin-top: 8%;
+    text-align: center;
+}
+#pesquisa h1 {
+    font-size: 450%;
+    text-align: center;
+    font-family: cocogoose, sans-serif;
+    color:#000;
+}
+#pesquisa #buscar{     
+    width:70%;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+#pesquisa #botao{
+    font-size: 25px;
+    width: 40%;
+    border-radius: 20px 20px;
+    background-color: #000;
+    color: #fff;
+}
+#pesquisa p{
+    font-size: 120%;
+    margin-bottom: 5%;
+}
+#pesquisa #selecao{     
+    width:60%;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+/*home*/
+
+/*Login*/
+#login{
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+#login input{
+    margin-top: 1%;
+    font-size: 20px;
+}
+#login input#botao{
+    color: #fff;
+    border-radius: 20px 20px;
+    background-color: #014801;
+    font-size: 20px;
+    width: 10%;
+}
+/*Login*/
+
+#ajuda{
+    margin-top: 150px;
+}
+
+
+ /*Usuario*/
+#usuario{
+    style = width: 50%; margin: 0px auto;
+    margin-top: 100px;
+    width: 60%;
+}
+#usuario legend{
+    font-size: 20px;
+}
+#usuario p{
+    margin: 2%;
+    font-size: 20px;
+    text-align: right;
+}
+#usuario input{
+    font-size: 20px;
+    width: 73%;
+}
+#usuario input#botao{
+    width: 30%;
+    border-radius: 20px 20px;
+    background-color: #014801;
+    color: #fff;
+}
+#usuario h3{
+    text-align: justify;
+    padding: 10px;
+}
+ /*Usuario*/
+
+/*cadTcc*/
+#curso{
+    text-align: right;
+}
+#curso select{
+    width: 73%;
+    font-size: 20px;
+}
+#curso input{
+    width: 600px;
+    font-size: 20px;
+}
+/*cadTcc*/
+
+/*cadFunc*/
+#sexo #selecao{
+    width: 5%;
+}
+#sexo{
+    float: right;
+    width: 73%;
+    font-size: 20px;
+}
+/*cadFunc*/
+/*Relatorio*/
+#relatorio{
+    margin-top: 100px;
+    border: 1px solid #000;
+    border-spacing: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#relatorio td{
+    text-align: center;
+    border: 1px solid #000;
+    padding: 5px;
+}
+#topo{
+    background-color: #ddd;
+}
+/*Relatorio*/

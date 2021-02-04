@@ -1,0 +1,187 @@
+--
+-- Database: `dbcontroletcc`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `administrador`
+--
+
+CREATE TABLE `administrador` (
+  `Adm_Int_Id` int(11) NOT NULL,
+  `Adm_Txt_Nome` text NOT NULL,
+  `Adm_Txt_Email` text NOT NULL,
+  `Adm_Txt_Usuario` text NOT NULL,
+  `Adm_Txt_Senha` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `administrador`
+--
+
+INSERT INTO `administrador` (`Adm_Int_Id`, `Adm_Txt_Nome`, `Adm_Txt_Email`, `Adm_Txt_Usuario`, `Adm_Txt_Senha`) VALUES
+(1, 'Administrador', 'adm@tccteca.com', 'Administrador', '123456789');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `aluno`
+--
+
+CREATE TABLE `aluno` (
+  `Aluno_Num_Ra` int(11) NOT NULL,
+  `Aluno_Txt_Nome` text NOT NULL,
+  `Aluno_Txt_Curso` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `cursos`
+--
+
+CREATE TABLE `cursos` (
+  `Curso_Num_Id` int(11) NOT NULL,
+  `Curso_Txt_Curso` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `cursos`
+--
+
+INSERT INTO `cursos` (`Curso_Num_Id`, `Curso_Txt_Curso`) VALUES
+(1, 'Analise e Desenvolvimento de Sistemas'),
+(2, 'Agronegocio '),
+(3, 'Producao Industrial'),
+(4, 'Radiologia'),
+(5, 'Logistica'),
+(6, 'Gestao Empresarial');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `notas`
+--
+
+CREATE TABLE `notas` (
+  `Notas_Int_Id` int(11) NOT NULL,
+  `Notas_Txt_Nota` text NOT NULL,
+  `Notas_Date_Data` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `orientadores`
+--
+
+CREATE TABLE `orientadores` (
+  `Ori_Int_Id` int(11) NOT NULL,
+  `Ori_Txt_Nome` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `orientadores`
+--
+
+INSERT INTO `orientadores` (`Ori_Int_Id`, `Ori_Txt_Nome`) VALUES
+(1, 'IVAN FERNANDES DE SOUZA'),
+(2, 'RICARDO RALL'),
+(3, 'RENATO LUIZ GAMBARATO'),
+(4, 'VIVIAN TOLEDO SANTOS GAMBARATO'),
+(5, 'MARCO ANTONIO NAGAO'),
+(6, 'MONICA REGINA GAIOTTO'),
+(7, 'ANA PAULA GUALTER DE OLIVEIRA');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `tcc`
+--
+
+CREATE TABLE `tcc` (
+  `Tcc_Int_Id` int(11) NOT NULL,
+  `Tcc_Int_Ra` int(11) NOT NULL,
+  `Tcc_Txt_Nome` text NOT NULL,
+  `Tcc_Txt_Curso` text NOT NULL,
+  `Tcc_Txt_Titulo` text NOT NULL,
+  `Tcc_Year_Ano` year(4) NOT NULL,
+  `Tcc_Int_Semestre` int(11) NOT NULL,
+  `Tcc_Txt_Orientador` text NOT NULL,
+  `Tcc_Txt_PalavraChave` text NOT NULL,
+  `Tcc_Txt_PDF` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `administrador`
+--
+ALTER TABLE `administrador`
+  ADD PRIMARY KEY (`Adm_Int_Id`);
+
+--
+-- Indexes for table `aluno`
+--
+ALTER TABLE `aluno`
+  ADD PRIMARY KEY (`Aluno_Num_Ra`);
+
+--
+-- Indexes for table `cursos`
+--
+ALTER TABLE `cursos`
+  ADD PRIMARY KEY (`Curso_Num_Id`);
+
+--
+-- Indexes for table `notas`
+--
+ALTER TABLE `notas`
+  ADD PRIMARY KEY (`Notas_Int_Id`);
+
+--
+-- Indexes for table `orientadores`
+--
+ALTER TABLE `orientadores`
+  ADD PRIMARY KEY (`Ori_Int_Id`);
+
+--
+-- Indexes for table `tcc`
+--
+ALTER TABLE `tcc`
+  ADD PRIMARY KEY (`Tcc_Int_Id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `administrador`
+--
+ALTER TABLE `administrador`
+  MODIFY `Adm_Int_Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `aluno`
+--
+ALTER TABLE `aluno`
+  MODIFY `Aluno_Num_Ra` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `cursos`
+--
+ALTER TABLE `cursos`
+  MODIFY `Curso_Num_Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+--
+-- AUTO_INCREMENT for table `notas`
+--
+ALTER TABLE `notas`
+  MODIFY `Notas_Int_Id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `orientadores`
+--
+ALTER TABLE `orientadores`
+  MODIFY `Ori_Int_Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
